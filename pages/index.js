@@ -99,6 +99,7 @@ export default function components() {
         <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400 py-4">
           Upload an image of a cat and we'll tell you what it might be thinking.
         </p>
+        
 
         <div className="w-full max-w-md px-2 py-2">
           <form onSubmit={submitForm} encType="multipart/form-data">
@@ -134,6 +135,22 @@ export default function components() {
           <CatIcon className="w-12 h-12" />
         </div>
       </main>
+      <style jsx>{`
+        .container {
+          width: 100%;
+          max-width: 100%;
+          padding: 0;
+          margin: 0 auto;
+        }
+        main {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          min-height: 100vh;
+          padding: 2rem;
+        }
+      `}</style>
     </div>
   );
 }
