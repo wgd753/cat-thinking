@@ -49,20 +49,23 @@ function SpeakerIcon(props) {
   )
 }
 
-export default function Home() {
+export default function components() {
   const [imagePreview, setImagePreview] = useState('');
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState('');
 
   const previewImage = (event) => {
     const file = event.target.files[0];
-    if (file) {
+    const validTypes = ['image/png', 'image/jpeg', 'image/webp', 'image/heic', 'image/heif'];
+  
+    if (file && validTypes.includes(file.type)) {
       const reader = new FileReader();
       reader.onloadend = () => {
         setImagePreview(reader.result);
       };
       reader.readAsDataURL(file);
     } else {
+      alert('Please select an image file (png, jpeg, webp, heic, heif).');
       setImagePreview('');
     }
   };
