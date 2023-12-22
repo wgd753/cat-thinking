@@ -123,8 +123,10 @@ export default function components() {
           <CardContent>
           {imagePreview && <img alt="Analyzed cat image" className="aspect-content object-cover" height="500" src={imagePreview} width="500" />}            
           <div className="mt-4 bg-gray-100 rounded-lg p-4">
-              <p className="ml-2 text-lg">{result || "🐱: Where have you been? I've been waiting for you for a long time."}</p>
-            </div>
+            <p className="ml-2 text-lg">
+              {loading ? "Analyzing..." : (result || "🐱: Where have you been? I've been waiting for you for a long time.")}
+            </p>
+          </div>
             
           </CardContent>
         </Card>
@@ -135,6 +137,12 @@ export default function components() {
           <CatIcon className="w-12 h-12" />
         </div>
       </main>
+
+      <footer className="text-center">
+        <p>Made by jellyw | <a href="mailto:admin@jellyw.com">admin@jellyw.com</a></p>
+        <p>  </p>
+      </footer>
+
       <style jsx>{`
         .container {
           width: 100%;
