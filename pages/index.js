@@ -59,11 +59,26 @@ export default function components() {
     const validTypes = ['image/png', 'image/jpeg', 'image/webp', 'image/heic', 'image/heif'];
   
     if (file && validTypes.includes(file.type)) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setImagePreview(reader.result);
-      };
-      reader.readAsDataURL(file);
+      if (file.type === 'image/heic' || file.type === 'image/heif') {
+        heic2any({
+          blob: file,
+          toType: 'image/jpeg',
+          quality: 0.7
+        })
+        .then((conversionResult) => {
+          const reader = new FileReader();
+          reader.onloadend = () => {
+            setImagePreview(reader.result);
+          };
+          reader.readAsDataURL(conversionResult);
+        });
+      } else {
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          setImagePreview(reader.result);
+        };
+        reader.readAsDataURL(file);
+      }
     } else {
       alert('Please select an image file (png, jpeg, webp, heic, heif).');
       setImagePreview('');
