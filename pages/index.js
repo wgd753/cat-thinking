@@ -56,7 +56,7 @@ export default function components() {
 
   const previewImage = (event) => {
     const file = event.target.files[0];
-    const validTypes = ['image/png', 'image/jpeg', 'image/webp', 'image/heic', 'image/heif'];
+    const validTypes = ['image/png', 'image/jpeg', 'image/webp'];
   
     if (file && validTypes.includes(file.type)) {
       if (file.type === 'image/heic' || file.type === 'image/heif') {
@@ -64,19 +64,14 @@ export default function components() {
           blob: file,
           toType: 'image/jpeg',
           quality: 0.7
-      })
-      .then((conversionResult) => {
-          console.log("Conversion successful", conversionResult);
+        })
+        .then((conversionResult) => {
           const reader = new FileReader();
           reader.onloadend = () => {
-              console.log("FileReader result", reader.result);
-              setImagePreview(reader.result);
+            setImagePreview(reader.result);
           };
           reader.readAsDataURL(conversionResult);
-      })
-      .catch((error) => {
-          console.error("Conversion failed", error);
-      });
+        });
       } else {
         const reader = new FileReader();
         reader.onloadend = () => {
@@ -85,7 +80,7 @@ export default function components() {
         reader.readAsDataURL(file);
       }
     } else {
-      alert('Please select an image file (png, jpeg, webp, heic, heif).');
+      alert('Please select an image file (png, jpeg, webp).');
       setImagePreview('');
     }
   };
