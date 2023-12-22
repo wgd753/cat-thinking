@@ -64,14 +64,19 @@ export default function components() {
           blob: file,
           toType: 'image/jpeg',
           quality: 0.7
-        })
-        .then((conversionResult) => {
+      })
+      .then((conversionResult) => {
+          console.log("Conversion successful", conversionResult);
           const reader = new FileReader();
           reader.onloadend = () => {
-            setImagePreview(reader.result);
+              console.log("FileReader result", reader.result);
+              setImagePreview(reader.result);
           };
           reader.readAsDataURL(conversionResult);
-        });
+      })
+      .catch((error) => {
+          console.error("Conversion failed", error);
+      });
       } else {
         const reader = new FileReader();
         reader.onloadend = () => {
