@@ -135,7 +135,7 @@ export default function components() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
-      <main className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-100">
+      <main className="flex flex-col items-center justify-center min-h-screen py-2">
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">What is the cat thinking</h1>
         <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400 py-4">
           Upload an image of a cat and we'll tell you what it might be thinking.
@@ -167,9 +167,9 @@ export default function components() {
           ) : (
             imagePreview && <img alt="Analyzed cat image" className="aspect-content object-cover" height="500" src={imagePreview} width="500" />
           )}
-          <div className="mt-4 bg-gray-100 rounded-lg p-4">
+          <div className="mt-4 rounded-lg p-4">
           <p className="ml-2 text-lg">
-            {compressing ? "Compressing..." : (loading ? "Analyzing..." : (result || "🐱: Where have you been? I've been waiting for you for a long time."))}
+            {compressing ? "🐱🐱🐱🐱🐱🐱🐱🐱🐱" : (loading ? "Analyzing..." : (result || "🐱: Where have you been? I've been waiting for you for a long time."))}
           </p>
           </div>
         </CardContent>

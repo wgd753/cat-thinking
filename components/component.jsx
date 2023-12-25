@@ -10,7 +10,7 @@ import { CardHeader, CardContent, Card } from "@/components/ui/card"
 export function Component() {
   return (
     (<main
-      className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-100">
+      className="flex flex-col items-center justify-center min-h-screen py-2">
       <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">What is the cat thinking</h1>
       <p
         className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400 py-4">
@@ -37,7 +37,7 @@ export function Component() {
             height="500"
             src="/placeholder.svg"
             width="500" />
-          <div className="mt-4 bg-gray-100 rounded-lg p-4">
+          <div className="mt-4 rounded-lg p-4">
             <SpeakerIcon className="w-6 h-6" />
             <p className="ml-2 text-lg">🐱Cat: What the cat thinks{"\n                      "}</p>
           </div>

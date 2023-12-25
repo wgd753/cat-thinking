@@ -4,7 +4,7 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
 }
 
@@ -25,3 +25,19 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@media (prefers-color-scheme: light) {
+  .rounded-lg {
+    background-color: white;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .rounded-lg, button {
+    background-color: black !important;
+    border-color: white !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+  }
+}
+
