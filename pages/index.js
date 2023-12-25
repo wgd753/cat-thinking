@@ -187,11 +187,13 @@ export default function components() {
         </div>
       </main>
 
-      <footer className="text-center">
-      <p>Made by <a href="http://cat.jellyw.com" style={{ textDecoration: 'underline' }}>jellyw</a></p>
-<p>Contact me: <a href="mailto:admin@jellyw.com">admin@jellyw.com</a></p>
+      <footer className="text-center" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+      <a href="https://www.producthunt.com/posts/what-is-the-cat-thinking?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-what&#0045;is&#0045;the&#0045;cat&#0045;thinking" target="_blank">
+    <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=431322&theme=neutral" alt="What&#0032;is&#0032;the&#0032;cat&#0032;thinking - Upload&#0044;&#0032;Discover&#0032;Your&#0032;Cat&#0039;s&#0032;Whisker&#0045;Twitching&#0032;Thoughts&#0033; | Product Hunt" style={{width: '250px', height: '54px'}} width="250" height="54" />
+        </a>
+        <p>Made by <a href="http://cat.jellyw.com" style={{ textDecoration: 'underline' }}>jellyw</a></p>
+        <p>Contact me: <a href="mailto:admin@jellyw.com">wgd@jellyw.com</a></p>
       </footer>
-
       <style jsx>{`
         .container {
           width: 100%;
