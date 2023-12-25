@@ -183,8 +183,8 @@ export default function components() {
       </main>
 
       <footer className="text-center">
-        <p>Made by jellyw | <a href="mailto:admin@jellyw.com">admin@jellyw.com</a></p>
-        <p>  </p>
+      <p>Made by <a href="http://cat.jellyw.com" style={{ textDecoration: 'underline' }}>jellyw</a></p>
+<p>Contact me: <a href="mailto:admin@jellyw.com">admin@jellyw.com</a></p>
       </footer>
 
       <style jsx>{`
