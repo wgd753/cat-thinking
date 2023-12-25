@@ -156,7 +156,7 @@ export default function components() {
               <Label htmlFor="catImage">Upload Cat Image</Label>
               <Input id="catImage" name="image" type="file" onChange={previewImage} />
               <Button type="submit" variant="dark" disabled={loading || compressing}>
-              {compressing ? 'Compressing...' : (loading ? 'Analyzing...' : 'Analyze')}
+              {compressing ? 'Scaning...' : (loading ? 'Analyzing...' : 'Analyze')}
             </Button>
             </div>
           </form>
@@ -171,7 +171,7 @@ export default function components() {
           </CardHeader>
           <CardContent>
           {compressing ? (
-            <div style={{ textAlign: 'center' }}>Compressing image...</div>
+            <div style={{ textAlign: 'center' }}>Scaning image...</div>
           ) : (
             imagePreview && <img alt="Analyzed cat image" className="aspect-content object-cover" height="500" src={imagePreview} width="500" />
           )}
