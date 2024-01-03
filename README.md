@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# What is the cat thinking-猫猫在想什么
+这是一个使用 Next.js 和 Gemini pro vision 构建的图生文项目，通过上传猫咪的图片，我们将告诉你它可能在想什么。
+## 体验地址
+https://cat.jellyw.com/
+## 项目配置
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+在项目的根目录下创建一个 `.env.local` 文件，然后添加以下内容：
+```
+GEMINI_API_KEY=你的API密钥
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+PS：可以在这里申请 API https://ai.google.dev/tutorials/setup
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 项目启动
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+首先，运行开发服务器：
+```
+    npm run dev
+    # 或者
+    yarn dev
+    # 或者
+    pnpm dev
+    # 或者
+    bun dev
+```
 
-## Learn More
+然后，打开浏览器访问 http://localhost:3000 即可看到结果。
 
-To learn more about Next.js, take a look at the following resources:
+你可以通过修改 app/page.js 文件来编辑页面，文件修改后页面会自动更新。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 项目部署
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+最简单的部署 Next.js 应用的方式是使用 Next.js 的创建者提供的 Vercel 平台。
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 项目结构
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- pages/：存放页面组件的目录，如首页 index.js，API 路由 api/upload.js 等。
+- components/：存放复用的 UI 组件，如按钮 ui/button.jsx，卡片 ui/card.jsx 等。
+- public/：存放静态资源，如网站图标，robots.txt，sitemap.xml 等。
+- styles/：存放全局样式文件。
+  
+## 项目特性
+
+- 使用 Google Analytics 进行网站访问统计，相关代码在 _document.js 中。
+- 使用 next-connect 和 multer 处理图片上传，相关代码在 api/upload.js 中。
+- 使用 browser-image-compression 进行图片压缩，相关代码在 index.js 中。
+- 使用 @google/generative-ai 进行图片分析，相关代码在 api/upload.js 中。
