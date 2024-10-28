@@ -3,7 +3,7 @@ import multer from 'multer';
 const { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } = require('@google/generative-ai');
 
 const API_KEY = process.env.GEMINI_API_KEY;
-const MODEL_NAME = 'gemini-pro-vision';
+const MODEL_NAME = 'gemini-1.5-flash';
 
 const upload = multer({
   storage: multer.memoryStorage(),
@@ -30,9 +30,9 @@ router.post(async (req, res) => {
 
     const generationConfig = {
       temperature: 1,
-      topK: 32,
-      topP: 1,
-      maxOutputTokens: 4096,
+      topK: 64,
+      topP: 0.95,
+      maxOutputTokens: 8192,
     };
 
     const safetySettings = [
