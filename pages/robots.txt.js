@@ -1,17 +1,16 @@
-const Robots = () => null;
+function RobotsTxt() {
+  // getServerSideProps will handle the content
+  return null;
+}
 
 export async function getServerSideProps({ res }) {
-  const robots = `User-agent: *
+  const robotsTxt = `User-agent: *
 Allow: /
 
-# Sitemaps
-Sitemap: https://cat.jellyw.com/sitemap.xml
-
-# Crawl-delay
-Crawl-delay: 10`;
+Sitemap: https://cat.jellyw.com/sitemap.xml`;
 
   res.setHeader('Content-Type', 'text/plain');
-  res.write(robots);
+  res.write(robotsTxt);
   res.end();
 
   return {
@@ -19,4 +18,4 @@ Crawl-delay: 10`;
   };
 }
 
-export default Robots; 
+export default RobotsTxt; 
