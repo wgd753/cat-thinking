@@ -9,13 +9,9 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: '/:locale/blog/posts/:id',
-        destination: '/blog/posts/:id',
-      },
-      {
         source: '/blog/posts/:id',
-        destination: '/blog/posts/:id',
-      }
+        destination: '/blog/posts/[id]',
+      },
     ]
   },
   webpack: (config, { isServer }) => {

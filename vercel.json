@@ -29,5 +29,17 @@
         }
       ]
     }
+  ],
+  "routes": [
+    {
+      "src": "/blog/posts/(?<id>[^/]+)",
+      "dest": "/blog/posts/[id]?id=$id"
+    }
+  ],
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@vercel/next"
+    }
   ]
 } 

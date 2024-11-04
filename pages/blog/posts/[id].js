@@ -361,12 +361,28 @@ export default function BlogPost({ post }) {
 
 export async function getServerSideProps({ params, locale, defaultLocale }) {
   try {
+    // 添加参数验证日志
+    console.log('Received params:', params);
+    console.log('Received ID:', params.id);
+    
     // 确保 params.id 是数字
     const postId = parseInt(params.id);
+    
+    // 验证 postId 是否为有效数字
+    if (isNaN(postId)) {
+      console.log('Invalid post ID:', params.id);
+      return {
+        notFound: true,
+      };
+    }
+    
     const post = blogPostsData[postId];
     
+    // 添加详细日志
+    console.log('Looking for post with ID:', postId);
+    console.log('Found post:', post ? 'Yes' : 'No');
+    
     if (!post) {
-      console.log(`Post not found for ID: ${postId}`); // 添加日志
       return {
         notFound: true,
       };
@@ -379,7 +395,7 @@ export async function getServerSideProps({ params, locale, defaultLocale }) {
       },
     };
   } catch (error) {
-    console.error('Error in getServerSideProps:', error); // 添加错误日志
+    console.error('Error in getServerSideProps:', error);
     return {
       notFound: true,
     };
