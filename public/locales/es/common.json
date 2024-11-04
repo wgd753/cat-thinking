@@ -1,15 +1,15 @@
 {
-  "title": "Traductor de Gatos - ¿Qué está pensando tu gato?",
-  "description": "Sube una foto de tu gato y nuestro AI analizará su expresión, lenguaje corporal y comportamiento para decirte lo que podría estar pensando. Herramienta gratuita de lectura mental felina para entender mejor a tu amigo peludo.",
-  "uploadLabel": "Subir/Tomar foto del gato",
+  "title": "🐱 Traductor de Gatos - ¿Qué está pensando tu gato?",
+  "description": "Sube una foto de tu gato y nuestro AI analizará su expresión, lenguaje corporal y comportamiento para decirte lo que podría estar pensando. ✨ Herramienta gratuita de lectura mental felina para entender mejor a tu amigo peludo.",
+  "uploadLabel": "📸 Subir/Tomar foto del gato",
   "analyzeButton": {
-    "default": "Analizar",
-    "scanning": "Escaneando...",
-    "analyzing": "Analizando..."
+    "default": "🔍 Analizar",
+    "scanning": "🔄 Escaneando...",
+    "analyzing": "🧠 Analizando..."
   },
   "analyzedImage": "Imagen analizada",
-  "defaultCatMessage": "🐱: ¿Dónde has estado? Te he estado esperando mucho tiempo.",
-  "error": "Error",
+  "defaultCatMessage": "🐱 ¿Dónde has estado? Te he estado esperando mucho tiempo. 😺",
+  "error": "❌ Error",
   "howItWorks": {
     "title": "Cómo funciona nuestro Traductor de Gatos",
     "description": "Nuestro traductor de gatos impulsado por AI analiza las expresiones faciales, la postura y el lenguaje corporal de tu gato para interpretar sus pensamientos y emociones. Simplemente sube una foto de tu gato y te ayudaremos a entender lo que está tratando de comunicar.",
@@ -38,15 +38,15 @@
     "a3": "¡Absolutamente! Tomamos la privacidad muy en serio. Todas las fotos subidas se procesan de forma segura y no se almacenan permanentemente. Utilizamos tecnología de encriptación de última generación para proteger tus datos."
   },
   "testimonials": {
-    "title": "Lo que dicen los dueños de gatos",
-    "review1": "¡Por fin entiendo lo que piensa mi gato! Esta herramienta ha transformado nuestra relación.",
-    "author1": "Sara y Sr. Bigotes",
-    "review2": "¡Precisión asombrosa! Captó perfectamente la actitud altiva de mi gato.",
-    "author2": "Miguel y Luna",
-    "review3": "Una herramienta tan divertida como perspicaz. ¡Las traducciones son muy precisas!",
-    "author3": "Emma y Oliver",
-    "review4": "Me ayuda a entender mejor las necesidades de mi gato. ¡Muy recomendado!",
-    "author4": "David y Milo"
+    "title": "💬 Lo que dicen los dueños de gatos",
+    "review1": "🌟 ¡Por fin entiendo lo que piensa mi gato! Esta herramienta ha transformado nuestra relación.",
+    "author1": "👩‍💼 Sara y Sr. Bigotes",
+    "review2": "✨ ¡Precisión asombrosa! Captó perfectamente la actitud altiva de mi gato.",
+    "author2": "👨‍💼 Miguel y Luna",
+    "review3": "🎯 Una herramienta tan divertida como perspicaz. ¡Las traducciones son muy precisas!",
+    "author3": "👩‍💼 Emma y Oliver",
+    "review4": "💝 Me ayuda a entender mejor las necesidades de mi gato. ¡Muy recomendado!",
+    "author4": "👨‍💼 David y Milo"
   },
   "articles": {
     "title": "Aprende más sobre la comunicación felina",

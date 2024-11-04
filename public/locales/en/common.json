@@ -1,29 +1,29 @@
 {
-  "title": "Cat Translator - What is Your Cat Thinking?",
-  "description": "Upload your cat's photo and our AI will analyze their expression, body language, and behavior to tell you what they might be thinking. Free cat mind reading tool to better understand your feline friend.",
-  "uploadLabel": "Upload/Take a Cat Photo",
+  "title": "🐱 Cat Translator - What is Your Cat Thinking?",
+  "description": "Upload your cat's photo and our AI will analyze their expression, body language, and behavior to tell you what they might be thinking. ✨ Free cat mind reading tool to better understand your feline friend.",
+  "uploadLabel": "📸 Upload/Take a Cat Photo",
   "analyzeButton": {
-    "default": "Analyze",
-    "scanning": "Scanning...",
-    "analyzing": "Analyzing..."
+    "default": "🔍 Analyze",
+    "scanning": "🔄 Scanning...",
+    "analyzing": "🧠 Analyzing..."
   },
   "analyzedImage": "Analyzed Image",
-  "defaultCatMessage": "🐱: Where have you been? I've been waiting for you for a long time.",
-  "error": "Error",
+  "defaultCatMessage": "🐱 Where have you been? I've been waiting for you for a long time. 😺",
+  "error": "❌ Error",
   "howItWorks": {
-    "title": "How Our Cat Translator Works",
-    "description": "Our AI-powered cat translator analyzes your cat's facial expressions, posture, and body language to interpret their thoughts and emotions. Simply upload a photo of your cat, and we'll help you understand what they're trying to communicate.",
+    "title": "🔮 How Our Cat Translator Works",
+    "description": "Our AI-powered cat translator analyzes your cat's facial expressions, posture, and body language to interpret their thoughts and emotions. ✨ Simply upload a photo of your cat, and we'll help you understand what they're trying to communicate.",
     "steps": {
       "upload": {
-        "title": "Upload Photo",
+        "title": "📱 Upload Photo",
         "description": "Take or select a clear photo of your cat"
       },
       "analyze": {
-        "title": "AI Analysis",
+        "title": "🤖 AI Analysis",
         "description": "Our advanced AI analyzes your cat's expressions, posture, and behavior"
       },
       "results": {
-        "title": "Get Results",
+        "title": "💡 Get Results",
         "description": "Receive instant insights into your cat's thoughts and feelings"
       }
     }
@@ -38,15 +38,15 @@
     "a3": "Absolutely! We take privacy seriously. All uploaded photos are processed securely and not stored permanently. We use state-of-the-art encryption to protect your data."
   },
   "testimonials": {
-    "title": "What Cat Parents Say",
-    "review1": "Finally understand what my cat is thinking! This tool has transformed our relationship.",
-    "author1": "Sarah & Mr. Whiskers",
-    "review2": "Amazing accuracy! It perfectly captured my cat's sassy attitude.",
-    "author2": "Mike & Luna",
-    "review3": "Such a fun and insightful tool. My cat's translations are spot-on!",
-    "author3": "Emma & Oliver",
-    "review4": "Helps me understand my cat's needs better. Highly recommended!",
-    "author4": "David & Milo"
+    "title": "💬 What Cat Parents Say",
+    "review1": "🌟 Finally understand what my cat is thinking! This tool has transformed our relationship.",
+    "author1": "👩‍💼 Sarah & Mr. Whiskers",
+    "review2": "✨ Amazing accuracy! It perfectly captured my cat's sassy attitude.",
+    "author2": "👨‍💼 Mike & Luna",
+    "review3": "🎯 Such a fun and insightful tool. My cat's translations are spot-on!",
+    "author3": "👩‍💼 Emma & Oliver",
+    "review4": "💝 Helps me understand my cat's needs better. Highly recommended!",
+    "author4": "👨‍💼 David & Milo"
   },
   "articles": {
     "title": "Learn More About Cat Communication",
