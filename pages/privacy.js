@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import SEOHead from '../components/common/SEOHead'
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
@@ -8,15 +8,11 @@ export default function Privacy() {
 
   return (
     <>
-      <Head>
-        <title>Privacy Policy | Cat Translator - Protecting Your Data</title>
-        <meta name="description" content="Learn how Cat Translator protects your privacy and handles your data. Read our detailed privacy policy to understand your rights and our responsibilities." />
-        <meta name="keywords" content="privacy policy, data protection, cat translator privacy, user data rights" />
-        <meta property="og:title" content="Privacy Policy | Cat Translator" />
-        <meta property="og:description" content="Learn how Cat Translator protects your privacy and handles your data." />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://cat.jellyw.com/privacy" />
-      </Head>
+      <SEOHead
+        title="Privacy Policy | Cat Translator"
+        description="Learn about how Cat Translator protects your privacy and handles your data."
+        path="/privacy"
+      />
 
       <main className="container mx-auto px-4 py-8">
         {/* Add Breadcrumb Navigation */}

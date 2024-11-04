@@ -10,7 +10,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useRouter } from 'next/router';
 import { blogPostsData } from '../lib/blogData';
 import Link from 'next/link';
-import SEOHead from '@/components/common/SEOHead'
+import SEOHead from '../components/common/SEOHead'
 
 
 function CatIcon(props) {
