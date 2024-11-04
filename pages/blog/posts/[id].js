@@ -3,7 +3,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
 import { blogPostsData } from '../../../lib/blogData';
 import { useRouter } from 'next/router';
-import SEOHead from '../../../components/SEOHead';
+import SEOHead from '@/components/common/SEOHead';
 
 export default function BlogPost({ post }) {
   const { t } = useTranslation('common');
