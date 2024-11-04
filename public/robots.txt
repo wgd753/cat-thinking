@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://cat.jellyw.com/sitemap.xml

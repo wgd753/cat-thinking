@@ -1,0 +1,35 @@
+{
+  "title": "고양이 번역기: 당신의 고양이는 무슨 생각을 하고 있나요?",
+  "description": "고양이의 사진을 업로드하면 AI가 표정, 몸짓, 행동을 분석하여 고양이가 생각하고 있는 것을 알려줍니다. 무료 고양이 마음 읽기 도구로 당신의 털복숭이 친구를 더 잘 이해하세요.",
+  "uploadLabel": "고양이 이미지 업로드",
+  "analyzeButton": {
+    "default": "분석 시작",
+    "scanning": "스캔 중...",
+    "analyzing": "분석 중..."
+  },
+  "analyzedImage": "분석 결과",
+  "defaultCatMessage": "🐱: 어디 갔었어요? 한참 기다렸어요.",
+  "howItWorks": {
+    "title": "고양이 번역기 작동 방식",
+    "description": "AI 기반 고양이 번역기가 고양이의 표정, 자세, 몸짓을 분석하여 생각과 감정을 해석합니다. 고양이 사진을 업로드하기만 하면, 고양이가 전달하려는 것을 이해하도록 도와드립니다.",
+    "steps": {
+      "upload": {
+        "title": "사진 업로드",
+        "description": "선명한 고양이 사진을 촬영하거나 선택"
+      },
+      "analyze": {
+        "title": "AI 분석",
+        "description": "AI가 고양이의 표정을 분석"
+      },
+      "results": {
+        "title": "결과 확인",
+        "description": "고양이의 생각 발견"
+      }
+    }
+  },
+  "footer": {
+    "madeWith": "jellyw가 ❤️으로 제작",
+    "contact": "연락처",
+    "tagline": "가장 정확한 고양이 번역기와 마음 읽기 도구. 오늘부터 당신의 고양이를 더 잘 이해하세요."
+  }
+} 

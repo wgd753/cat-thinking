@@ -1,0 +1,35 @@
+{
+  "title": "Traductor de Gatos: ¿Qué está pensando tu gato?",
+  "description": "Sube una foto de tu gato y nuestro AI analizará su expresión, lenguaje corporal y comportamiento para decirte lo que podría estar pensando. Herramienta gratuita de lectura mental felina para entender mejor a tu amigo peludo.",
+  "uploadLabel": "Subir imagen del gato",
+  "analyzeButton": {
+    "default": "Analizar",
+    "scanning": "Escaneando...",
+    "analyzing": "Analizando..."
+  },
+  "analyzedImage": "Imagen analizada",
+  "defaultCatMessage": "🐱: ¿Dónde has estado? Te he estado esperando mucho tiempo.",
+  "howItWorks": {
+    "title": "Cómo funciona nuestro Traductor de Gatos",
+    "description": "Nuestro traductor de gatos impulsado por AI analiza las expresiones faciales, la postura y el lenguaje corporal de tu gato para interpretar sus pensamientos y emociones. Simplemente sube una foto de tu gato y te ayudaremos a entender lo que está tratando de comunicar.",
+    "steps": {
+      "upload": {
+        "title": "Subir foto",
+        "description": "Toma o selecciona una foto clara de tu gato"
+      },
+      "analyze": {
+        "title": "Análisis AI",
+        "description": "Nuestro AI analiza la expresión de tu gato"
+      },
+      "results": {
+        "title": "Obtener resultados",
+        "description": "Descubre lo que tu gato está pensando"
+      }
+    }
+  },
+  "footer": {
+    "madeWith": "Hecho con ❤️ para gatos por",
+    "contact": "Contacto",
+    "tagline": "El traductor y lector mental de gatos más preciso. Entiende mejor a tu gato hoy."
+  }
+} 

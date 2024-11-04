@@ -1,0 +1,35 @@
+{
+  "title": "Cat Translator: What is Your Cat Thinking?",
+  "description": "Upload your cat's photo and our AI will analyze their expression, body language, and behavior to tell you what they might be thinking. Free cat mind reading tool to better understand your feline friend.",
+  "uploadLabel": "Upload Cat Image",
+  "analyzeButton": {
+    "default": "Analyze",
+    "scanning": "Scanning...",
+    "analyzing": "Analyzing..."
+  },
+  "analyzedImage": "Analyzed Image",
+  "defaultCatMessage": "🐱: Where have you been? I've been waiting for you for a long time.",
+  "howItWorks": {
+    "title": "How Our Cat Translator Works",
+    "description": "Our AI-powered cat translator analyzes your cat's facial expressions, posture, and body language to interpret their thoughts and emotions. Simply upload a photo of your cat, and we'll help you understand what they're trying to communicate.",
+    "steps": {
+      "upload": {
+        "title": "Upload Photo",
+        "description": "Take or select a clear photo of your cat"
+      },
+      "analyze": {
+        "title": "AI Analysis",
+        "description": "Our AI analyzes your cat's expression"
+      },
+      "results": {
+        "title": "Get Results",
+        "description": "Discover what your cat is thinking"
+      }
+    }
+  },
+  "footer": {
+    "madeWith": "Made with ❤️ for cats by",
+    "contact": "Contact",
+    "tagline": "The most accurate cat translator and mind reader. Understand your cat better today."
+  }
+} 

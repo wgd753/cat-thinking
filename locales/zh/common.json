@@ -1,0 +1,35 @@
+{
+  "title": "猫语翻译器：你的猫咪在想什么？",
+  "description": "上传你的猫咪照片，我们的AI将分析它们的表情、肢体语言和行为，告诉你它们可能在想什么。免费的猫咪心思解读工具，帮助你更好地理解你的毛茸茸的朋友。",
+  "uploadLabel": "上传猫咪图片",
+  "analyzeButton": {
+    "default": "开始分析",
+    "scanning": "扫描中...",
+    "analyzing": "分析中..."
+  },
+  "analyzedImage": "分析结果",
+  "defaultCatMessage": "🐱：你去哪里了？我等你好久了。",
+  "howItWorks": {
+    "title": "猫语翻译器如何工作",
+    "description": "我们的AI驱动的猫语翻译器会分析你的猫咪的面部表情、姿势和肢体语言，解读它们的想法和情绪。只需上传猫咪的照片，我们就能帮你理解它们想表达什么。",
+    "steps": {
+      "upload": {
+        "title": "上传照片",
+        "description": "拍摄或选择一张清晰的猫咪照片"
+      },
+      "analyze": {
+        "title": "AI分析",
+        "description": "我们的AI分析猫咪的表情"
+      },
+      "results": {
+        "title": "获取结果",
+        "description": "发现猫咪的想法"
+      }
+    }
+  },
+  "footer": {
+    "madeWith": "由jellyw用❤️制作",
+    "contact": "联系方式",
+    "tagline": "最准确的猫语翻译器和心思解读工具。今天就开始更好地理解你的猫咪。"
+  }
+} 
