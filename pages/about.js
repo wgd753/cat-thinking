@@ -15,7 +15,7 @@ export default function About() {
         <meta property="og:title" content="About Cat Translator | AI-Powered Cat Behavior Interpreter" />
         <meta property="og:description" content="Discover how Cat Translator uses Google's Gemini AI to help you understand your cat's behavior." />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://yourdomain.com/about" />
+        <link rel="canonical" href="https://cat.jellyw.com/about" />
       </Head>
 
       <main className="container mx-auto px-4 py-8">

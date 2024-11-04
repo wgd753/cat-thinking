@@ -115,7 +115,6 @@ class MyDocument extends Document {
           />
           
           {/* 基础 SEO 标签 */}
-          <meta name="description" content={currentSeo.description} />
           <meta name="keywords" content={currentSeo.keywords} />
           
           {/* Open Graph 标签 */}

@@ -24,11 +24,11 @@ export default function BlogPost({ post }) {
     <>
       <Head>
         <title>{post.title} | Cat Translator Blog</title>
-        <meta name="description" content={post.content[0].content} />
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.content[0].content} />
+        <meta name="description" content={post.excerpt} />
+        <meta property="og:title" content={`${post.title} | Cat Translator Blog`} />
+        <meta property="og:description" content={post.excerpt} />
         <meta property="og:type" content="article" />
-        <link rel="canonical" href={`https://cat.jellyw.com/${router.locale}/blog/posts/${post.id}`} />
+        <link rel="canonical" href={`https://cat.jellyw.com/blog/posts/${post.id}`} />
       </Head>
 
       <main className="container mx-auto px-4 py-8">
