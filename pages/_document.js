@@ -147,14 +147,14 @@ class MyDocument extends Document {
           />
 
           {/* Google Analytics */}
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-YBC3RTJHB4"></script>
           <script
             dangerouslySetInnerHTML={{
               __html: `
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', 'G-XXXXXXXX');
+                gtag('config', 'G-YBC3RTJHB4');
               `,
             }}
           />
@@ -164,29 +164,6 @@ class MyDocument extends Document {
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
           />
-
-          {/* 添加 Google Sitelinks Searchbox */}
-          <script type="application/ld+json">
-            {`
-              {
-                "@context": "https://schema.org",
-                "@type": "WebSite",
-                "url": "https://cat.jellyw.com/",
-                "potentialAction": {
-                  "@type": "SearchAction",
-                  "target": {
-                    "@type": "EntryPoint",
-                    "urlTemplate": "https://cat.jellyw.com/search?q={search_term_string}"
-                  },
-                  "query-input": "required name=search_term_string"
-                }
-              }
-            `}
-          </script>
-
-          {/* 添加社交媒体卡片预览 */}
-          <meta property="og:image" content="https://cat.jellyw.com/cat-translator-preview.jpg" />
-          <meta name="twitter:image" content="https://cat.jellyw.com/cat-translator-preview.jpg" />
           
           {/* 添加更多相关标记 */}
           <link rel="preconnect" href="https://fonts.googleapis.com" />
