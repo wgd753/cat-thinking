@@ -1,22 +1,18 @@
-import Head from 'next/head';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
+import SEOHead from '../components/SEOHead';
 
 export default function About() {
   const { t } = useTranslation('common');
 
   return (
     <>
-      <Head>
-        <title>About Cat Translator | AI-Powered Cat Behavior Interpreter</title>
-        <meta name="description" content="Discover how Cat Translator uses Google's Gemini AI to help you understand your cat's behavior. Learn about our mission to strengthen the bond between cats and their humans." />
-        <meta name="keywords" content="cat translator, cat behavior, AI cat interpreter, pet technology, cat communication" />
-        <meta property="og:title" content="About Cat Translator | AI-Powered Cat Behavior Interpreter" />
-        <meta property="og:description" content="Discover how Cat Translator uses Google's Gemini AI to help you understand your cat's behavior." />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://cat.jellyw.com/about" />
-      </Head>
+      <SEOHead
+        title="About Cat Translator | AI-Powered Cat Behavior Interpreter"
+        description="Discover how Cat Translator uses Google's Gemini AI to help you understand your cat's behavior. Learn about our mission to strengthen the bond between cats and their humans."
+        path="/about"
+      />
 
       <main className="container mx-auto px-4 py-8">
         <nav className="text-sm mb-8" aria-label="Breadcrumb">

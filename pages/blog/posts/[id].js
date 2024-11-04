@@ -1,9 +1,9 @@
-import Head from 'next/head';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
 import { blogPostsData } from '../../../lib/blogData';
 import { useRouter } from 'next/router';
+import SEOHead from '../../../components/SEOHead';
 
 export default function BlogPost({ post }) {
   const { t } = useTranslation('common');
@@ -22,14 +22,12 @@ export default function BlogPost({ post }) {
 
   return (
     <>
-      <Head>
-        <title>{post.title} | Cat Translator Blog</title>
-        <meta name="description" content={post.excerpt} />
-        <meta property="og:title" content={`${post.title} | Cat Translator Blog`} />
-        <meta property="og:description" content={post.excerpt} />
-        <meta property="og:type" content="article" />
-        <link rel="canonical" href={`https://cat.jellyw.com/blog/posts/${post.id}`} />
-      </Head>
+      <SEOHead
+        title={`${post.title} | Cat Translator Blog`}
+        description={post.excerpt}
+        path={`/blog/posts/${post.id}`}
+        ogType="article"
+      />
 
       <main className="container mx-auto px-4 py-8">
         <nav className="text-sm mb-8" aria-label="Breadcrumb">
