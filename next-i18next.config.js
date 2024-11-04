@@ -1,14 +1,9 @@
-const path = require('path')
-
+/** @type {import('next-i18next').UserConfig} */
 module.exports = {
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'zh', 'ja', 'ko', 'es'],
-    localeDetection: false,
   },
   defaultNS: 'common',
-  localePath: path.resolve('./public/locales'),
-  reloadOnPrerender: process.env.NODE_ENV === 'development',
-  fallbackLng: 'en',
-  load: 'currentOnly',
+  localePath: typeof window === 'undefined' ? require('path').resolve('./public/locales') : '/locales',
 } 

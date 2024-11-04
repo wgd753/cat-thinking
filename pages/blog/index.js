@@ -1,9 +1,8 @@
-import Head from 'next/head';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import SEOHead from '../../components/common/SEOHead'
+import SEOHead from '@/components/common/SEOHead';
 
 export default function Blog() {
   const { t } = useTranslation('common');
