@@ -410,11 +410,13 @@ export default function BlogPost({ post }) {
 }
 
 export async function getServerSideProps({ params, locale }) {
-  const post = blogPostsData[params.id];
+  // 确保 params.id 是数字
+  const postId = parseInt(params.id);
+  const post = blogPostsData[postId];
   
   if (!post) {
     return {
-      notFound: true, // This will show the 404 page
+      notFound: true, // 这会显示 404 页面
     };
   }
   

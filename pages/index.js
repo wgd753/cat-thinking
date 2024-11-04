@@ -9,6 +9,7 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useRouter } from 'next/router';
 import { blogPostsData } from './blog/posts/[id]';
+import Link from 'next/link';
 
 
 function CatIcon(props) {
@@ -331,12 +332,12 @@ export default function Components() {
               <article key={post.id} className="p-4 border rounded-lg">
                 <h3 className="font-bold mb-2">{post.title}</h3>
                 <p className="text-gray-600">{post.content[0].content}</p>
-                <a 
-                  href={`/blog/posts/${post.id}`} 
+                <Link 
+                  href={`/blog/posts/${post.id}`}
                   className="text-blue-500 hover:underline mt-2 inline-block"
                 >
                   {t('articles.readMore')}
-                </a>
+                </Link>
               </article>
             ))}
           </div>

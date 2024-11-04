@@ -7,6 +7,10 @@
   },
   "rewrites": [
     {
+      "source": "/:locale/blog/posts/:id",
+      "destination": "/blog/posts/:id"
+    },
+    {
       "source": "/:locale/locales/:path*",
       "destination": "/locales/:path*"
     },
