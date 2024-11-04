@@ -134,19 +134,53 @@ export default function components() {
   return (
     <div className="container">
       <Head>
-        <title>What is the cat thinking</title>
+        <title>Cat Translator | What is Your Cat Thinking? | Free Cat Mind Reader</title>
+        <meta name="description" content="Free online cat translator and mind reader. Upload your cat's photo and discover what your cat is thinking. AI-powered cat emotion and thought analysis tool." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        {/* 添加更多meta标签 */}
+        <meta name="keywords" content="cat translator, cat mind reader, what is my cat thinking, cat emotion analyzer, cat thoughts, cat behavior, cat mood, cat language translator, cat communication" />
+        <meta property="og:title" content="Cat Translator - Discover What Your Cat is Thinking" />
+        <meta property="og:description" content="Upload your cat's photo and let our AI tell you what your cat is thinking. Free cat mind reading and emotion analysis tool." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://cat.jellyw.com" />
+        
+        {/* 添加Twitter卡片 */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Cat Translator - What is Your Cat Thinking?" />
+        <meta name="twitter:description" content="Free AI-powered cat mind reader and emotion analyzer. Understand your cat's thoughts and feelings." />
+        
+        {/* 添加结构化数据 */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "Cat Translator",
+            "description": "AI-powered cat mind reader and emotion analyzer",
+            "url": "https://cat.jellyw.com",
+            "applicationCategory": "Pets & Animals",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          })}
+        </script>
       </Head>
 
       <main className="flex flex-col items-center justify-center min-h-screen py-2">
-        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">What is the cat thinking</h1>
+        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
+          Cat Translator: What is Your Cat Thinking?
+        </h1>
+        
         <div className="mt-4">
-          <a href="http://mao.jellyw.com" className="text-blue-500">中文</a>
+          <a href="http://mao.jellyw.com" className="text-blue-500">中文版猫咪翻译器</a>
           <span> | </span>
-          <a href="http://cat.jellyw.com" className="text-blue-500">English</a>
+          <a href="http://cat.jellyw.com" className="text-blue-500">English Cat Translator</a>
         </div>
+
         <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400 py-4">
-          Upload an image of a cat and we'll tell you what it might be thinking.
+          Upload your cat's photo and our AI will analyze their expression, body language, and behavior to tell you what they might be thinking. Free cat mind reading tool to better understand your feline friend.
         </p>
         
 
@@ -188,14 +222,34 @@ export default function components() {
           <CatIcon className="w-12 h-12" />
           <CatIcon className="w-12 h-12" />
         </div>
+        <section className="max-w-2xl mx-auto mt-8 text-center">
+          <h2 className="text-2xl font-bold mb-4">How Our Cat Translator Works</h2>
+          <p className="text-gray-600 mb-4">
+            Our AI-powered cat translator analyzes your cat's facial expressions, posture, and body language to interpret their thoughts and emotions. Simply upload a photo of your cat, and we'll help you understand what they're trying to communicate.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+            <div>
+              <h3 className="font-bold">Upload Photo</h3>
+              <p>Take or select a clear photo of your cat</p>
+            </div>
+            <div>
+              <h3 className="font-bold">AI Analysis</h3>
+              <p>Our AI analyzes your cat's expression</p>
+            </div>
+            <div>
+              <h3 className="font-bold">Get Results</h3>
+              <p>Discover what your cat is thinking</p>
+            </div>
+          </div>
+        </section>
       </main>
 
-      <footer className="text-center" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-      <a href="https://www.producthunt.com/posts/what-is-the-cat-thinking?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-what&#0045;is&#0045;the&#0045;cat&#0045;thinking" target="_blank">
-    <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=431322&theme=neutral" alt="What&#0032;is&#0032;the&#0032;cat&#0032;thinking - Upload&#0044;&#0032;Discover&#0032;Your&#0032;Cat&#0039;s&#0032;Whisker&#0045;Twitching&#0032;Thoughts&#0033; | Product Hunt" style={{width: '250px', height: '54px'}} width="250" height="54" />
-        </a>
-        <p>Made by <a href="http://cat.jellyw.com" style={{ textDecoration: 'underline' }}>jellyw</a></p>
-        <p>Contact me: <a href="mailto:admin@jellyw.com">wgd@jellyw.com</a></p>
+      <footer className="text-center py-8">
+        <p>Made with ❤️ for cats by <a href="http://cat.jellyw.com" className="underline">jellyw</a></p>
+        <p>Contact: <a href="mailto:admin@jellyw.com">wgd@jellyw.com</a></p>
+        <p className="text-sm text-gray-500 mt-2">
+          The most accurate cat translator and mind reader. Understand your cat better today.
+        </p>
       </footer>
       <style jsx>{`
         .container {
