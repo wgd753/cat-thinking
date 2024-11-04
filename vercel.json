@@ -1,11 +1,9 @@
 {
-  "framework": "next",
+  "framework": "nextjs",
   "buildCommand": "next build",
   "installCommand": "pnpm install",
-  "build": {
-    "env": {
-      "NEXT_PUBLIC_LOCALES": "en,zh,ja,ko,es"
-    }
+  "env": {
+    "NEXT_PUBLIC_LOCALES": "en,zh,ja,ko,es"
   },
   "rewrites": [
     {
