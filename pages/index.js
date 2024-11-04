@@ -123,8 +123,11 @@ export default function Components() {
   
     const response = await fetch('/api/upload', {
       method: 'POST',
+      headers: {
+        'x-selected-language': router.locale || 'en', // 添加当前选择的语言
+      },
       body: formData,
-    });
+    });  
     if (!response.ok) {
       const errorData = await response.json();
       setResult({ data: '', error: errorData.error });

@@ -26,22 +26,14 @@ const prompts = {
   es: 'Eres un traductor experto del lenguaje felino, capaz de traducir la voz del gato a través de las fotos que sube el usuario. Adivina con precisión las emociones y pensamientos del gato a través del contenido de las fotos. Puedes adivinar lo que el gato quiere decir basándote en su lenguaje corporal, expresiones y entorno. Después de interpretar, por favor da la "voz" del gato según su tono, en un lenguaje hablado más natural, responde en español, el formato es el siguiente: 🐱: [<Lo que piensa el gato>]. Si no hay gato en la imagen subida por el usuario, devuelve "¡No hay gato en la imagen~"'
 };
 
-router.all((req, res, next) => {
-  if (req.method === 'OPTIONS') {
-    res.status(200).end();
-  } else {
-    next();
-  }
-});
-
 router.post(async (req, res) => {
   try {
     const genAI = new GoogleGenerativeAI(API_KEY);
     const model = genAI.getGenerativeModel({ model: MODEL_NAME });
 
-    // 获取用户的语言设置
-    const locale = req.headers['accept-language']?.split(',')[0]?.split('-')[0] || 'en';
-    const prompt = prompts[locale] || prompts.en; // 如果没有对应的语言，默认使用英语
+    // 从请求头中获取用户选择的语言
+    const selectedLocale = req.headers['x-selected-language'] || 'en';
+    const prompt = prompts[selectedLocale] || prompts.en;
 
     const generationConfig = {
       temperature: 1,
@@ -77,7 +69,7 @@ router.post(async (req, res) => {
 
     const parts = [
       {
-        text: prompt // 使用对应语言的提示词
+        text: prompt
       },
       {
         inlineData: {
