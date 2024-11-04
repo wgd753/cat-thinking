@@ -4,42 +4,5 @@
   "installCommand": "pnpm install",
   "env": {
     "NEXT_PUBLIC_LOCALES": "en,zh,ja,ko,es"
-  },
-  "rewrites": [
-    {
-      "source": "/:locale/blog/posts/:id",
-      "destination": "/blog/posts/:id"
-    },
-    {
-      "source": "/:locale/locales/:path*",
-      "destination": "/locales/:path*"
-    },
-    {
-      "source": "/:locale/:path*",
-      "destination": "/:path*"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/locales/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600"
-        }
-      ]
-    }
-  ],
-  "routes": [
-    {
-      "src": "/blog/posts/(?<id>[^/]+)",
-      "dest": "/blog/posts/[id]?id=$id"
-    }
-  ],
-  "builds": [
-    {
-      "src": "next.config.js",
-      "use": "@vercel/next"
-    }
-  ]
+  }
 } 

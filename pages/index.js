@@ -8,7 +8,7 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useRouter } from 'next/router';
-import { blogPostsData } from './blog/posts/[id]';
+import { blogPostsData } from '../lib/blogData';
 import Link from 'next/link';
 
 
