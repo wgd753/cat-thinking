@@ -16,7 +16,7 @@
     "steps": {
       "upload": {
         "title": "사진 업로드",
-        "description": "���명한 고양이 사진을 촬영하거나 선택"
+        "description": "선명한 고양이 사진을 촬영하거나 선택"
       },
       "analyze": {
         "title": "AI 분석",
