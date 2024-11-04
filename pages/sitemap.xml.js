@@ -1,5 +1,4 @@
 function SiteMap() {
-  // getServerSideProps will handle the XML generation
   return null;
 }
 
@@ -13,27 +12,32 @@ export async function getServerSideProps({ res }) {
     {
       url: '/',
       changefreq: 'daily',
-      priority: 1.0
+      priority: 1.0,
+      multilingual: true // 标记支持多语言的页面
     },
     {
       url: '/about',
       changefreq: 'monthly',
-      priority: 0.8
+      priority: 0.8,
+      multilingual: false
     },
     {
       url: '/privacy',
       changefreq: 'monthly',
-      priority: 0.5
+      priority: 0.5,
+      multilingual: false
     },
     {
       url: '/terms',
       changefreq: 'monthly',
-      priority: 0.5
+      priority: 0.5,
+      multilingual: false
     },
     {
       url: '/blog',
       changefreq: 'daily',
-      priority: 0.9
+      priority: 0.9,
+      multilingual: false
     }
   ];
 
@@ -44,10 +48,9 @@ export async function getServerSideProps({ res }) {
     priority: 0.7
   }));
 
-  // 生成所有 URL
   const allUrls = [];
 
-  // 添加默认语言（英文）页面
+  // 添加所有英文页面
   [...staticPages, ...blogPosts].forEach(page => {
     allUrls.push(`
       <url>
@@ -59,23 +62,24 @@ export async function getServerSideProps({ res }) {
     `);
   });
 
-  // 添加其他语言版本
+  // 只为支持多语言的页面添加其他语言版本
   languages.forEach(lang => {
     if (lang !== 'en') {
-      [...staticPages, ...blogPosts].forEach(page => {
-        allUrls.push(`
-          <url>
-            <loc>${baseUrl}/${lang}${page.url}</loc>
-            <lastmod>${currentDate}</lastmod>
-            <changefreq>${page.changefreq}</changefreq>
-            <priority>${page.priority * 0.8}</priority>
-          </url>
-        `);
-      });
+      staticPages
+        .filter(page => page.multilingual)
+        .forEach(page => {
+          allUrls.push(`
+            <url>
+              <loc>${baseUrl}/${lang}${page.url}</loc>
+              <lastmod>${currentDate}</lastmod>
+              <changefreq>${page.changefreq}</changefreq>
+              <priority>${page.priority * 0.8}</priority>
+            </url>
+          `);
+        });
     }
   });
 
-  // 生成完整的 sitemap XML
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       ${allUrls.join('')}
