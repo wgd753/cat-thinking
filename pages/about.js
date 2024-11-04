@@ -16,50 +16,39 @@ export default function About() {
         <h1 className="text-4xl font-bold mb-8">About Cat Translator</h1>
 
         <section className="mb-12">
-          <h2>Our Mission</h2>
-          <p>At Cat Translator, we're passionate about strengthening the bond between humans and their feline companions. Our AI-powered platform helps decode cat behavior, making communication between species more intuitive and meaningful.</p>
+          <h2>Hey there! 👋</h2>
+          <p>Welcome to Cat Translator! I'm super passionate about helping people understand their furry friends better. This little project of mine uses AI magic to decode what your cat is trying to tell you!</p>
         </section>
 
         <section className="mb-12">
-          <h2>Our Story</h2>
-          <p>Founded in 2024, Cat Translator emerged from a simple observation: while cats are one of the most popular pets worldwide, they're often misunderstood. Our team of animal behaviorists, AI specialists, and cat lovers came together to bridge this communication gap.</p>
+          <h2>How This All Started</h2>
+          <p>You know how cats can be mysterious sometimes? That's exactly why I created Cat Translator in 2024! As a cat parent myself, I wanted to build something cool that could help us all better understand what our cats are thinking. Thanks to Google's awesome Gemini AI model, that dream is now a reality!</p>
         </section>
 
         <section className="mb-12">
-          <h2>How It Works</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <h2>The Tech Behind It</h2>
+          <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h3>Advanced AI</h3>
-              <p>Our AI model is trained on millions of cat images and behaviors, allowing accurate interpretation of feline body language.</p>
+              <h3>AI Magic ✨</h3>
+              <p>I'm using Google's super-smart Gemini AI to do the heavy lifting. It's like having a cat behavior expert in your pocket, helping you figure out what your cat's trying to say!</p>
             </div>
             <div>
-              <h3>Expert Input</h3>
-              <p>Every analysis is backed by research from certified animal behaviorists and veterinarians.</p>
-            </div>
-            <div>
-              <h3>Continuous Learning</h3>
-              <p>Our system continuously improves through user feedback and new research findings.</p>
+              <h3>Getting Better Every Day</h3>
+              <p>The more people use Cat Translator, the smarter it gets! Your feedback helps make the tool even better at understanding our feline friends.</p>
             </div>
           </div>
         </section>
 
         <section className="mb-12">
-          <h2>Our Team</h2>
-          <p>Our diverse team includes:</p>
-          <ul>
-            <li>Certified Animal Behaviorists</li>
-            <li>AI and Machine Learning Engineers</li>
-            <li>Veterinary Consultants</li>
-            <li>UX/UI Designers</li>
-            <li>Cat Welfare Advocates</li>
-          </ul>
+          <h2>Who's Behind This?</h2>
+          <p>Hi! 👋 I'm a programmer and total cat nerd who built Cat Translator. While it's just me running the show, I'm committed to making this the best tool possible for cat lovers everywhere. Sometimes the best things start small, right? 😊</p>
         </section>
 
         <section className="mb-12">
-          <h2>Contact Us</h2>
-          <p>We'd love to hear from you! Reach out to us at:</p>
-          <p>Email: wgd@jellyw.com</p>
-          <p>Address: Shanghai, China</p>
+          <h2>Let's Chat!</h2>
+          <p>Got questions? Ideas? Cat photos to share? I'd love to hear from you!</p>
+          <p>Drop me a line at: wgd@jellyw.com</p>
+          <p>Based in: Guangzhou, China 🇨🇳</p>
         </section>
       </article>
     </div>
