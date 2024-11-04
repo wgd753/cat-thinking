@@ -13,6 +13,15 @@ const nextConfig = {
     }
     return config;
   },
+  publicRuntimeConfig: {
+    localeSubpaths: {
+      en: 'en',
+      zh: 'zh',
+      ja: 'ja',
+      ko: 'ko',
+      es: 'es',
+    },
+  },
 }
 
 module.exports = nextConfig

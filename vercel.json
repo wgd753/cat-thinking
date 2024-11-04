@@ -1,1 +1,31 @@
- 
+{
+  "framework": "next",
+  "buildCommand": "next build",
+  "installCommand": "pnpm install",
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_LOCALES": "en,zh,ja,ko,es"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/:locale/locales/:path*",
+      "destination": "/locales/:path*"
+    },
+    {
+      "source": "/:locale/:path*",
+      "destination": "/:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/locales/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    }
+  ]
+} 

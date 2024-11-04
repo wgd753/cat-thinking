@@ -10,15 +10,9 @@ function MyApp({ Component, pageProps }) {
   )
 }
 
-// 使用 getInitialProps 而不是在每个页面使用 getStaticProps
-MyApp.getInitialProps = async ({ Component, ctx }) => {
-  let pageProps = {}
-
-  if (Component.getInitialProps) {
-    pageProps = await Component.getInitialProps(ctx)
-  }
-
-  return { pageProps }
-}
-
-export default appWithTranslation(MyApp)
+export default appWithTranslation(MyApp, {
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'zh', 'ja', 'ko', 'es'],
+  },
+})
