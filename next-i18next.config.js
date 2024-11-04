@@ -11,5 +11,4 @@ module.exports = {
   reloadOnPrerender: process.env.NODE_ENV === 'development',
   fallbackLng: 'en',
   load: 'currentOnly',
-  debug: process.env.NODE_ENV === 'development',
 } 
