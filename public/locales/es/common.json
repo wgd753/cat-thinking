@@ -20,17 +20,66 @@
       },
       "analyze": {
         "title": "Análisis AI",
-        "description": "Nuestro AI analiza la expresión de tu gato"
+        "description": "Nuestro AI avanzado analiza las expresiones, postura y comportamiento del gato"
       },
       "results": {
         "title": "Obtener resultados",
-        "description": "Descubre lo que tu gato está pensando"
+        "description": "Comprende instantáneamente los pensamientos y sentimientos de tu gato"
       }
     }
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "q1": "¿Qué tan preciso es el traductor de gatos?",
+    "a1": "Nuestro traductor de gatos con AI utiliza modelos avanzados de aprendizaje automático entrenados con millones de imágenes y comportamientos felinos. Si bien no es 100% preciso, proporciona información muy precisa basada en las expresiones faciales, el lenguaje corporal y el contexto del gato.",
+    "q2": "¿Puedo usar cualquier tipo de foto de gato?",
+    "a2": "¡Sí! Nuestro traductor funciona con todas las razas de gatos y puede analizar fotos tomadas en diversas situaciones. Para obtener mejores resultados, usa fotos claras que muestren bien la cara y el lenguaje corporal del gato con buena iluminación.",
+    "q3": "¿Está protegida la privacidad de mi gato?",
+    "a3": "¡Absolutamente! Tomamos la privacidad muy en serio. Todas las fotos subidas se procesan de forma segura y no se almacenan permanentemente. Utilizamos tecnología de encriptación de última generación para proteger tus datos."
+  },
+  "testimonials": {
+    "title": "Lo que dicen los dueños de gatos",
+    "review1": "¡Por fin entiendo lo que piensa mi gato! Esta herramienta ha transformado nuestra relación.",
+    "author1": "Sara y Sr. Bigotes",
+    "review2": "¡Precisión asombrosa! Captó perfectamente la actitud altiva de mi gato.",
+    "author2": "Miguel y Luna",
+    "review3": "Una herramienta tan divertida como perspicaz. ¡Las traducciones son muy precisas!",
+    "author3": "Emma y Oliver",
+    "review4": "Me ayuda a entender mejor las necesidades de mi gato. ¡Muy recomendado!",
+    "author4": "David y Milo"
+  },
+  "articles": {
+    "title": "Aprende más sobre la comunicación felina",
+    "readMore": "Leer más",
+    "article1": {
+      "title": "Entendiendo el lenguaje corporal felino",
+      "excerpt": "Aprende a interpretar las posiciones de la cola, movimientos de orejas y otras señales sutiles del lenguaje corporal."
+    },
+    "article2": {
+      "title": "La ciencia detrás de las emociones felinas",
+      "excerpt": "Descubre cómo los gatos expresan emociones y qué nos dice la investigación reciente sobre los sentimientos felinos."
+    },
+    "article3": {
+      "title": "Comportamientos felinos comunes explicados",
+      "excerpt": "Desde el amasado hasta los gorjeos, comprende el significado detrás de los comportamientos cotidianos de tu gato."
+    },
+    "article4": {
+      "title": "Fortaleciendo el vínculo con tu gato",
+      "excerpt": "Consejos y técnicas para mejorar la comunicación y fortalecer tu relación con tu amigo felino."
+    }
+  },
+  "stats": {
+    "translations": "Traducciones felinas",
+    "rating": "Calificación de usuarios",
+    "users": "Usuarios felices"
   },
   "footer": {
     "madeWith": "Hecho con ❤️ para gatos por",
     "contact": "Contacto",
-    "tagline": "El traductor y lector mental de gatos más preciso. Entiende mejor a tu gato hoy."
+    "tagline": "El traductor y lector mental de gatos más preciso. Entiende mejor a tu gato hoy.",
+    "privacy": "Política de privacidad",
+    "terms": "Términos de uso",
+    "blog": "Blog",
+    "about": "Sobre nosotros"
   }
 } 

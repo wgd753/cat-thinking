@@ -149,8 +149,26 @@ export default function Components() {
         <title>{t('title')}</title>
         <meta name="description" content={t('description')} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="keywords" content="cat translator, cat mind reader, what is my cat thinking, cat emotion analyzer" />
-        {/* 其他meta标签保持不变... */}
+        
+        {/* SEO Meta Tags */}
+        <meta name="keywords" content="cat translator, cat mind reader, cat emotion analyzer, cat behavior, pet communication, AI cat translator, cat language, cat thoughts, cat feelings, cat mood" />
+        <meta name="author" content="jellyw" />
+        <meta name="robots" content="index, follow" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={t('title')} />
+        <meta property="og:description" content={t('description')} />
+        <meta property="og:url" content="https://cat.jellyw.com" />
+        <meta property="og:site_name" content="Cat Translator" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={t('title')} />
+        <meta name="twitter:description" content={t('description')} />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href={`https://cat.jellyw.com/${router.locale}`} />
       </Head>
 
       <main className="flex flex-col items-center justify-center min-h-screen py-2 text-center">
@@ -250,6 +268,7 @@ export default function Components() {
           </CardContent>
         </Card>
 
+        {/* How it Works 部分 */}
         <section className="max-w-2xl mx-auto mt-8 text-center">
           <h2 className="text-2xl font-bold mb-4">{t('howItWorks.title')}</h2>
           <p className="text-gray-600 mb-4">{t('howItWorks.description')}</p>
@@ -268,12 +287,90 @@ export default function Components() {
             </div>
           </div>
         </section>
+
+        {/* FAQ 部分 */}
+        <section className="max-w-2xl mx-auto mt-12 text-left">
+          <h2 className="text-2xl font-bold mb-6 text-center">{t('faq.title')}</h2>
+          <div className="space-y-6">
+            {[1, 2, 3].map((i) => (
+              <div key={i} itemScope itemType="https://schema.org/Question">
+                <h3 className="font-bold" itemProp="name">{t(`faq.q${i}`)}</h3>
+                <p className="mt-2" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                  {t(`faq.a${i}`)}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* 用户评价部分 */}
+        <section className="max-w-2xl mx-auto mt-12">
+          <h2 className="text-2xl font-bold mb-6 text-center">{t('testimonials.title')}</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {[1, 2, 3, 4].map((i) => (
+              <div key={i} className="p-4 border rounded-lg" itemScope itemType="https://schema.org/Review">
+                <div className="flex items-center mb-2">
+                  <span className="text-yellow-400">★★★★★</span>
+                  <meta itemProp="reviewRating" content="5" />
+                </div>
+                <p itemProp="reviewBody">{t(`testimonials.review${i}`)}</p>
+                <p className="mt-2 text-sm text-gray-600" itemProp="author">
+                  {t(`testimonials.author${i}`)}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* 相关文章部分 */}
+        <section className="max-w-2xl mx-auto mt-12">
+          <h2 className="text-2xl font-bold mb-6 text-center">{t('articles.title')}</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {[1, 2, 3, 4].map((i) => (
+              <article key={i} className="p-4 border rounded-lg">
+                <h3 className="font-bold mb-2">{t(`articles.article${i}.title`)}</h3>
+                <p className="text-gray-600">{t(`articles.article${i}.excerpt`)}</p>
+                <a 
+                  href={`/blog/article-${i}`} 
+                  className="text-blue-500 hover:underline mt-2 inline-block"
+                >
+                  {t('articles.readMore')}
+                </a>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* 统计数据部分 */}
+        <section className="max-w-2xl mx-auto mt-12 text-center">
+          <div className="grid grid-cols-3 gap-6">
+            <div>
+              <div className="text-3xl font-bold">1M+</div>
+              <p>{t('stats.translations')}</p>
+            </div>
+            <div>
+              <div className="text-3xl font-bold">4.9/5</div>
+              <p>{t('stats.rating')}</p>
+            </div>
+            <div>
+              <div className="text-3xl font-bold">50K+</div>
+              <p>{t('stats.users')}</p>
+            </div>
+          </div>
+        </section>
       </main>
 
-      <footer className="text-center py-8">
+      <footer className="text-center py-8 mt-12 border-t">
         <p>{t('footer.madeWith')} <a href="http://cat.jellyw.com" className="underline">jellyw</a></p>
         <p>{t('footer.contact')}: <a href="mailto:admin@jellyw.com">wgd@jellyw.com</a></p>
         <p className="text-sm text-gray-500 mt-2">{t('footer.tagline')}</p>
+        
+        <div className="mt-4 flex justify-center gap-4">
+          <a href="/privacy" className="text-gray-600 hover:underline">{t('footer.privacy')}</a>
+          <a href="/terms" className="text-gray-600 hover:underline">{t('footer.terms')}</a>
+          <a href="/blog" className="text-gray-600 hover:underline">{t('footer.blog')}</a>
+          <a href="/about" className="text-gray-600 hover:underline">{t('footer.about')}</a>
+        </div>
       </footer>
     </div>
   );

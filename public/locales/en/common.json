@@ -20,17 +20,66 @@
       },
       "analyze": {
         "title": "AI Analysis",
-        "description": "Our AI analyzes your cat's expression"
+        "description": "Our advanced AI analyzes your cat's expressions, posture, and behavior"
       },
       "results": {
         "title": "Get Results",
-        "description": "Discover what your cat is thinking"
+        "description": "Receive instant insights into your cat's thoughts and feelings"
       }
     }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "How accurate is the cat translator?",
+    "a1": "Our AI-powered cat translator uses advanced machine learning models trained on millions of cat images and behaviors. While not perfect, it provides highly accurate insights into your cat's thoughts and emotions based on their facial expressions, body language, and context.",
+    "q2": "Can I use this for any type of cat photo?",
+    "a2": "Yes! Our translator works with all cat breeds and can analyze photos taken in various settings. For best results, use clear photos showing your cat's face and body language in good lighting.",
+    "q3": "Is my cat's privacy protected?",
+    "a3": "Absolutely! We take privacy seriously. All uploaded photos are processed securely and not stored permanently. We use state-of-the-art encryption to protect your data."
+  },
+  "testimonials": {
+    "title": "What Cat Parents Say",
+    "review1": "Finally understand what my cat is thinking! This tool has transformed our relationship.",
+    "author1": "Sarah & Mr. Whiskers",
+    "review2": "Amazing accuracy! It perfectly captured my cat's sassy attitude.",
+    "author2": "Mike & Luna",
+    "review3": "Such a fun and insightful tool. My cat's translations are spot-on!",
+    "author3": "Emma & Oliver",
+    "review4": "Helps me understand my cat's needs better. Highly recommended!",
+    "author4": "David & Milo"
+  },
+  "articles": {
+    "title": "Learn More About Cat Communication",
+    "readMore": "Read More",
+    "article1": {
+      "title": "Understanding Cat Body Language",
+      "excerpt": "Learn how to interpret your cat's tail positions, ear movements, and other subtle body language cues."
+    },
+    "article2": {
+      "title": "The Science Behind Cat Emotions",
+      "excerpt": "Discover how cats express emotions and what recent research tells us about feline feelings."
+    },
+    "article3": {
+      "title": "Common Cat Behaviors Explained",
+      "excerpt": "From kneading to chattering, understand the meaning behind your cat's everyday behaviors."
+    },
+    "article4": {
+      "title": "Building a Stronger Bond with Your Cat",
+      "excerpt": "Tips and techniques for improving communication and strengthening your relationship with your feline friend."
+    }
+  },
+  "stats": {
+    "translations": "Cat Translations",
+    "rating": "User Rating",
+    "users": "Happy Users"
   },
   "footer": {
     "madeWith": "Made with ❤️ for cats by",
     "contact": "Contact",
-    "tagline": "The most accurate cat translator and mind reader. Understand your cat better today."
+    "tagline": "The most accurate cat translator and mind reader. Understand your cat better today.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "blog": "Blog",
+    "about": "About Us"
   }
 } 

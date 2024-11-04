@@ -5,7 +5,7 @@ import { Fragment } from 'react'
 function MyApp({ Component, pageProps }) {
   return (
     <Fragment>
-      <Component {...pageProps} />
+      <Component {...pageProps} key={pageProps.locale} />
     </Fragment>
   )
 }
