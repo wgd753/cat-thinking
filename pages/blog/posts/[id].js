@@ -3,9 +3,11 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
 import { blogPostsData } from '../../../lib/blogData';
+import { useRouter } from 'next/router';
 
 export default function BlogPost({ post }) {
   const { t } = useTranslation('common');
+  const router = useRouter();
 
   if (!post) {
     return (
@@ -26,14 +28,14 @@ export default function BlogPost({ post }) {
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.content[0].content} />
         <meta property="og:type" content="article" />
-        <link rel="canonical" href={`https://cat.jellyw.com/blog/posts/${post.id}`} />
+        <link rel="canonical" href={`https://cat.jellyw.com/${router.locale}/blog/posts/${post.id}`} />
       </Head>
 
       <main className="container mx-auto px-4 py-8">
         <nav className="text-sm mb-8" aria-label="Breadcrumb">
           <ol className="list-none p-0 inline-flex">
             <li className="flex items-center">
-              <Link href="/">
+              <Link href="/" locale={router.locale}>
                 <span className="text-indigo-600 hover:text-indigo-800">Home</span>
               </Link>
               <svg className="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
@@ -41,7 +43,7 @@ export default function BlogPost({ post }) {
               </svg>
             </li>
             <li className="flex items-center">
-              <Link href="/blog">
+              <Link href="/blog" locale={router.locale}>
                 <span className="text-indigo-600 hover:text-indigo-800">Blog</span>
               </Link>
               <svg className="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
@@ -111,15 +113,18 @@ export default function BlogPost({ post }) {
   );
 }
 
-export async function getStaticPaths() {
-  // 预生成所有可能的路径
-  const paths = Object.keys(blogPostsData).map((id) => ({
-    params: { id: id.toString() },
-  }));
+export async function getStaticPaths({ locales }) {
+  // 为每个语言生成所有可能的路径
+  const paths = locales.flatMap(locale => 
+    Object.keys(blogPostsData).map(id => ({
+      params: { id: id.toString() },
+      locale: locale, // 添加语言参数
+    }))
+  );
 
   return {
     paths,
-    fallback: false, // 显示404，如果路径不存在
+    fallback: false,
   };
 }
 

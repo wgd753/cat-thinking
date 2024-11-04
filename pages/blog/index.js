@@ -2,9 +2,11 @@ import Head from 'next/head';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export default function Blog() {
   const { t } = useTranslation('common');
+  const router = useRouter();
 
   const blogPosts = [
     {
@@ -131,10 +133,12 @@ export default function Blog() {
                 <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
                   Featured Post • {blogPosts[0].category}
                 </div>
-                <Link href={`/blog/posts/${blogPosts[0].id}`}>
-                  <h2 className="block mt-1 text-2xl leading-tight font-bold text-black hover:text-indigo-600">
-                    {blogPosts[0].title}
-                  </h2>
+                <Link 
+                  href={`/blog/posts/${blogPosts[0].id}`}
+                  locale={router.locale}
+                  className="text-blue-500 hover:underline mt-2 inline-block"
+                >
+                  {t('articles.readMore')}
                 </Link>
                 <p className="mt-2 text-gray-500">{blogPosts[0].excerpt}</p>
                 <div className="mt-4 flex items-center">
@@ -157,10 +161,12 @@ export default function Blog() {
                   <div className="text-sm text-indigo-500 font-semibold mb-2">
                     {post.category}
                   </div>
-                  <Link href={`/blog/posts/${post.id}`}>
-                    <h3 className="text-xl font-semibold mb-2 hover:text-indigo-600">
-                      {post.title}
-                    </h3>
+                  <Link 
+                    href={`/blog/posts/${post.id}`}
+                    locale={router.locale}
+                    className="text-blue-500 hover:underline mt-2 inline-block"
+                  >
+                    {t('articles.readMore')}
                   </Link>
                   <p className="text-gray-600 mb-4">{post.excerpt}</p>
                   <div className="flex items-center text-sm text-gray-500">
