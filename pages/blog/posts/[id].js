@@ -339,21 +339,29 @@ export default function BlogPost({ post }) {
   );
 }
 
-export async function getServerSideProps({ params, locale }) {
-  // 确保 params.id 是数字
-  const postId = parseInt(params.id);
-  const post = blogPostsData[postId];
-  
-  if (!post) {
+export async function getServerSideProps({ params, locale, defaultLocale }) {
+  try {
+    // 确保 params.id 是数字
+    const postId = parseInt(params.id);
+    const post = blogPostsData[postId];
+    
+    if (!post) {
+      console.log(`Post not found for ID: ${postId}`); // 添加日志
+      return {
+        notFound: true,
+      };
+    }
+    
     return {
-      notFound: true, // 这会显示 404 页面
+      props: {
+        post,
+        ...(await serverSideTranslations(locale ?? defaultLocale ?? 'en', ['common'])),
+      },
+    };
+  } catch (error) {
+    console.error('Error in getServerSideProps:', error); // 添加错误日志
+    return {
+      notFound: true,
     };
   }
-  
-  return {
-    props: {
-      post,
-      ...(await serverSideTranslations(locale ?? 'en', ['common'])),
-    },
-  };
 } 
