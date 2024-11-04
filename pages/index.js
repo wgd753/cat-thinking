@@ -8,6 +8,7 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useRouter } from 'next/router';
+import { blogPostsData } from './blog/posts/[id]';
 
 
 function CatIcon(props) {
@@ -326,12 +327,12 @@ export default function Components() {
         <section className="max-w-2xl mx-auto mt-12">
           <h2 className="text-2xl font-bold mb-6 text-center">{t('articles.title')}</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            {[1, 2, 3, 4].map((i) => (
-              <article key={i} className="p-4 border rounded-lg">
-                <h3 className="font-bold mb-2">{t(`articles.article${i}.title`)}</h3>
-                <p className="text-gray-600">{t(`articles.article${i}.excerpt`)}</p>
+            {Object.values(blogPostsData).slice(0, 4).map((post) => (
+              <article key={post.id} className="p-4 border rounded-lg">
+                <h3 className="font-bold mb-2">{post.title}</h3>
+                <p className="text-gray-600">{post.content[0].content}</p>
                 <a 
-                  href={`/blog/article-${i}`} 
+                  href={`/blog/posts/${post.id}`} 
                   className="text-blue-500 hover:underline mt-2 inline-block"
                 >
                   {t('articles.readMore')}

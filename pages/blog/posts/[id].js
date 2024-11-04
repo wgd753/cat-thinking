@@ -3,8 +3,8 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
 
-// 博客文章数据
-const blogPostsData = {
+// 添加 export 关键字
+export const blogPostsData = {
   1: {
     id: 1,
     title: "Understanding Your Cat's Body Language 🐱",
@@ -96,7 +96,7 @@ const blogPostsData = {
         title: "When Cats Purr 🕒",
         content: [
           "• During positive experiences (contentment)",
-          "�� When in pain or distress (self-soothing)",
+          " When in pain or distress (self-soothing)",
           "• While nursing kittens",
           "• To communicate with humans"
         ]
@@ -412,9 +412,15 @@ export default function BlogPost({ post }) {
 export async function getServerSideProps({ params, locale }) {
   const post = blogPostsData[params.id];
   
+  if (!post) {
+    return {
+      notFound: true, // This will show the 404 page
+    };
+  }
+  
   return {
     props: {
-      post: post || null,
+      post,
       ...(await serverSideTranslations(locale ?? 'en', ['common'])),
     },
   };
