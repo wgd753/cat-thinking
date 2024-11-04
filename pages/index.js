@@ -10,6 +10,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useRouter } from 'next/router';
 import { blogPostsData } from '../lib/blogData';
 import Link from 'next/link';
+import SEOHead from '@/components/common/SEOHead'
 
 
 function CatIcon(props) {
@@ -147,31 +148,11 @@ export default function Components() {
 
   return (
     <div className="container mx-auto px-4">
-      <Head>
-        <title>{t('title')}</title>
-        <meta name="description" content={t('description')} />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
-        {/* SEO Meta Tags */}
-        <meta name="keywords" content="cat translator, cat mind reader, cat emotion analyzer, cat behavior, pet communication, AI cat translator, cat language, cat thoughts, cat feelings, cat mood" />
-        <meta name="author" content="jellyw" />
-        <meta name="robots" content="index, follow" />
-        
-        {/* Open Graph Tags */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={t('title')} />
-        <meta property="og:description" content={t('description')} />
-        <meta property="og:url" content="https://cat.jellyw.com" />
-        <meta property="og:site_name" content="Cat Translator" />
-        
-        {/* Twitter Card Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={t('title')} />
-        <meta name="twitter:description" content={t('description')} />
-        
-        {/* Canonical URL */}
-        <link rel="canonical" href={`https://cat.jellyw.com/${router.locale}`} />
-      </Head>
+      <SEOHead
+        title={t('title')}
+        description={t('description')}
+        path="/"
+      />
 
       <main className="flex flex-col items-center justify-center min-h-screen py-2 text-center">
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-center max-w-4xl mx-auto">

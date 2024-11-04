@@ -3,6 +3,7 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import SEOHead from '@/components/common/SEOHead'
 
 export default function Blog() {
   const { t } = useTranslation('common');
@@ -67,15 +68,13 @@ export default function Blog() {
 
   return (
     <>
-      <Head>
-        <title>Cat Behavior Blog | Cat Translator - Expert Tips & Insights</title>
-        <meta name="description" content="Explore our blog for expert insights on cat behavior, communication tips, and the latest updates about AI-powered cat translation technology." />
-        <meta name="keywords" content="cat behavior, cat communication, pet care tips, cat translation, AI pets" />
-        <meta property="og:title" content="Cat Behavior Blog | Cat Translator" />
-        <meta property="og:description" content="Expert insights on cat behavior and communication" />
-        <meta property="og:type" content="blog" />
-        <link rel="canonical" href="https://cat.jellyw.com/blog" />
-      </Head>
+        <SEOHead
+        title="Cat Behavior Blog | Cat Translator - Expert Tips & Insights"
+        description="Explore our blog for expert insights on cat behavior, communication tips, and the latest updates about AI-powered cat translation technology."
+        path="/blog"
+        ogType="blog"
+      />
+
 
       <main className="container mx-auto px-4 py-8">
         {/* Add Breadcrumb Navigation */}
