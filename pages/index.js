@@ -277,9 +277,18 @@ export default function Components() {
 }
 
 export async function getServerSideProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['common'])),
-    },
+  try {
+    return {
+      props: {
+        ...(await serverSideTranslations(locale ?? 'en', ['common'])),
+      },
+    }
+  } catch (error) {
+    console.error('Translation loading error:', error);
+    return {
+      props: {
+        ...(await serverSideTranslations('en', ['common'])),
+      },
+    }
   }
 }
