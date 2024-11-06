@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { blogPostsData } from '@/lib/blogData';
 import { useRouter } from 'next/router';
 import SEOHead from '@/components/common/SEOHead';
+import BlogJsonLd from '../../../components/BlogJsonLd';
 
 export default function BlogPost({ post }) {
   const { t } = useTranslation('common');
@@ -28,6 +29,8 @@ export default function BlogPost({ post }) {
         path={`/blog/posts/${post.id}`}
         ogType="article"
       />
+
+      <BlogJsonLd post={post} locale={router.locale} />
 
       <main className="container mx-auto px-4 py-8">
         <nav className="text-sm mb-8" aria-label="Breadcrumb">
@@ -89,23 +92,6 @@ export default function BlogPost({ post }) {
             </section>
           ))}
         </article>
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BlogPosting",
-              "headline": post.title,
-              "datePublished": post.date,
-              "articleSection": post.category,
-              "publisher": {
-                "@type": "Organization",
-                "name": "Cat Translator"
-              }
-            })
-          }}
-        />
       </main>
     </>
   );
