@@ -105,6 +105,21 @@ class MyDocument extends Document {
       ]
     };
 
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Cat Jelly",
+      "url": "https://cat.jellyw.com",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "256",
+        "reviewCount": "180",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    };
+
     return (
       <Html lang={locale}>
         <Head>
@@ -167,6 +182,11 @@ class MyDocument extends Document {
           {/* 添加更多相关标记 */}
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          />
         </Head>
         <body>
           <Main />
